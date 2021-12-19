@@ -6,7 +6,7 @@ import "./Ownable.sol";
 
 /**
  * @author Bogdan Naida
- * @dev Реализация токена ERC20 .
+ * @dev Реализация токена ERC20.
  */
  
 contract ExcaliburToken is ERC20Token, Ownable {
