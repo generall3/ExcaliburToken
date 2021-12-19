@@ -2,11 +2,7 @@ require("@nomiclabs/hardhat-waffle");
 require("./tasks/index.ts");
 require("dotenv").config();
 
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
 module.exports = {
-  // defaultNetwork: "bsc_testnet",
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
