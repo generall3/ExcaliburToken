@@ -1,35 +1,33 @@
-import "@nomiclabs/hardhat-etherscan";
-import "@nomiclabs/hardhat-waffle";
-import "@typechain/hardhat";
-import * as dotenv from "dotenv";
-import "hardhat-docgen";
-import "hardhat-gas-reporter";
-import { HardhatUserConfig } from "hardhat/config";
-import "solidity-coverage";
-import "./tasks/index.ts";
+require("@nomiclabs/hardhat-waffle");
+require("./tasks/index.ts");
+require("dotenv").config();
 
-dotenv.config();
-
-const config: HardhatUserConfig = {
-  solidity: "0.8.4",
-  docgen: {
-    path: "./docs",
-    clear: true,
-    runOnCompile: true,
-  },
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+  // defaultNetwork: "bsc_testnet",
+  defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+    },
+    localhost: {
+      url: "http://localhost:8545"
+    },
     rinkeby: {
       url: process.env.RINKEBY_URL,
-      accounts: [<string>process.env.PRIVATE_KEY],
+      chainId: 4,
+      gasPrice: 20000000000,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
-  gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
-  },
-  etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+  solidity: {
+    version: "0.8.0",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
   },
 };
-
-export default config;

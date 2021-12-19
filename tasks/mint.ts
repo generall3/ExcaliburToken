@@ -1,4 +1,3 @@
-
 /* eslint node/no-unpublished-import: "off", curly: "error" */
 import "@nomiclabs/hardhat-ethers";
 import { task } from "hardhat/config";

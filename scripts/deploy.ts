@@ -1,14 +1,21 @@
-import { ethers } from "hardhat";
+import "@nomiclabs/hardhat-ethers";
+import{ ethers } from "hardhat";
 
 async function main() {
-  const Token = await ethers.getContractFactory("MyToken");
-  const token = await Token.deploy("Bogdan", "MT");
-  await token.deployed();
+  const [deployer] = await ethers.getSigners(); 
+  console.log("Deploying contracts with the account:", deployer.address); 
 
-  console.log("Token deployed to:", token.address);
+  const ExcaliburToken = await ethers.getContractFactory("ExcaliburToken");
+  const excaliburToken = await ExcaliburToken.deploy();
+
+  await excaliburToken.deployed();
+
+  console.log("Token deployed to:", excaliburToken.address);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

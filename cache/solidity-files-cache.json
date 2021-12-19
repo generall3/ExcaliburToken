@@ -1,0 +1,112 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/user/Documents/github/crypton.studio-test2/ERC20/contracts/ExcaliburToken.sol": {
+      "lastModificationDate": 1639925750939,
+      "contentHash": "0c8de854f6772e5ba5e6270b008b75b8",
+      "sourceName": "contracts/ExcaliburToken.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Token",
+        "ExcaliburToken",
+        "Ownable"
+      ]
+    },
+    "/home/user/Documents/github/crypton.studio-test2/ERC20/contracts/IERC20.sol": {
+      "lastModificationDate": 1639925906408,
+      "contentHash": "b3b3bdf34aed2ba668921db8511bee71",
+      "sourceName": "contracts/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Token"
+      ]
+    },
+    "/home/user/Documents/github/crypton.studio-test2/ERC20/contracts/Ownable.sol": {
+      "lastModificationDate": 1639925916212,
+      "contentHash": "19988ff536e57e2d0f2299104321be61",
+      "sourceName": "contracts/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    }
+  }
+}
