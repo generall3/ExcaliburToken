@@ -5,44 +5,7 @@ pragma solidity ^0.8.0;
  * @author Bogdan Naida
  * @dev Реализация токена ERC20 .
  */
-
-abstract contract ERC20Token {
-    function name() virtual public view returns (string memory);
-    function symbol() virtual public view returns (string memory);
-    function decimals() virtual public view returns (uint8);
-    function totalSupply() virtual public view returns (uint256);
-    function balanceOf(address _owner) virtual public view returns (uint256 balance);
-    function transfer(address _to, uint256 _value) virtual public returns (bool success);
-    function transferFrom(address _from, address _to, uint256 _value) virtual public returns (bool success);
-    function approve(address _spender, uint256 _value) virtual public returns (bool success);
-    function allowance(address _owner, address _spender) virtual public view returns (uint256 remaining);
-
-    event Transfer(address indexed _from, address indexed _to, uint256 _value);
-    event Approval(address indexed _owner, address indexed _spender, uint256 _value);
-}
-
-contract Ownable {
-    address public owner;
-    address public newOwner;
-
-    event OwnershipTransferred(address indexed _from, address indexed _to);
-
-    constructor() {
-        owner = msg.sender;
-    }
-
-    function transferOwnership(address _to) public {
-        require(msg.sender == owner);
-        newOwner = _to; 
-    }
-
-    function acceptOwnership() public {
-        require(msg.sender == newOwner);
-        emit OwnershipTransferred(owner, newOwner);
-        owner = newOwner;
-        newOwner = address(0);
-    }
-}
+ 
 contract ExcaliburToken is ERC20Token, Ownable {
 
     // Символ токена
