@@ -1,6 +1,9 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
+import "./IERC20.sol";
+import "./Ownable.sol";
+
 /**
  * @author Bogdan Naida
  * @dev Реализация токена ERC20 .
